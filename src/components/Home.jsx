@@ -51,6 +51,9 @@ function Home() {
               <li className="nav-item">
                 <a className="nav-link" href="#join">Join Race</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#join">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
