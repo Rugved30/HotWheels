@@ -1,0 +1,373 @@
+.hotwheels-home {
+  background: #080808;
+  overflow-x: hidden;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Navbar */
+.custom-navbar {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 120, 0, 0.25);
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: #ff3b00 !important;
+}
+
+.logo-text span {
+  color: #ffd000;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffd000 !important;
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 80, 0, 0.5), transparent 35%),
+    radial-gradient(circle at 80% 60%, rgba(255, 208, 0, 0.35), transparent 30%),
+    linear-gradient(135deg, #130000, #080808 60%, #1b0b00);
+  overflow: hidden;
+}
+
+.hero-content {
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-badge {
+  background: linear-gradient(90deg, #ff3300, #ffd000);
+  color: #111;
+  font-weight: 700;
+}
+
+.hero-title span {
+  color: #ffd000;
+  text-shadow: 0 0 25px rgba(255, 208, 0, 0.8);
+}
+
+.hero-subtitle {
+  color: #f2f2f2;
+  max-width: 540px;
+}
+
+.hero-car-card {
+  position: relative;
+  padding: 20px;
+  animation: floatCar 3s ease-in-out infinite;
+}
+
+.hero-car-img {
+  border-radius: 35px;
+  box-shadow:
+    0 0 35px rgba(255, 68, 0, 0.8),
+    0 25px 60px rgba(0, 0, 0, 0.8);
+  transform: rotate(-4deg);
+}
+
+.speed-lines::before,
+.speed-lines::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 180px;
+  background: linear-gradient(90deg, transparent, #ffd000, transparent);
+  right: 75%;
+  border-radius: 20px;
+  animation: speedLine 1.4s linear infinite;
+}
+
+.speed-lines::before {
+  top: 35%;
+}
+
+.speed-lines::after {
+  top: 55%;
+  animation-delay: 0.4s;
+}
+
+/* Moving car track */
+.track-line {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff4d00 0 60px,
+    #ffd000 60px 95px
+  );
+  box-shadow: 0 0 25px #ff4d00;
+}
+
+.moving-car {
+  position: absolute;
+  bottom: 100px;
+  left: -120px;
+  font-size: 4rem;
+  z-index: 3;
+  animation: drive 6s linear infinite;
+}
+
+/* Stats */
+.stats-section {
+  background: linear-gradient(90deg, #ff3b00, #ff8c00, #ffd000);
+}
+
+.stat-box {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  transform: skewX(-4deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.stat-box h2 {
+  color: #ffd000;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.stat-box p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Sections */
+.section-label {
+  color: #ff4d00;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.cars-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.92), rgba(15, 5, 0, 0.95)),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 20px,
+      rgba(255, 80, 0, 0.08) 20px 40px
+    );
+}
+
+.car-card {
+  background: #151515;
+  border-radius: 25px;
+  overflow: hidden;
+  color: white;
+  border: 1px solid rgba(255, 120, 0, 0.25);
+  transition: 0.35s ease;
+  position: relative;
+}
+
+.car-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(255, 72, 0, 0.35);
+}
+
+.car-img-wrap {
+  height: 230px;
+  overflow: hidden;
+}
+
+.car-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.car-card:hover img {
+  transform: scale(1.15) rotate(-2deg);
+}
+
+.car-card h4 {
+  color: #ffd000;
+  font-weight: 800;
+}
+
+.car-card p {
+  color: #ccc;
+}
+
+/* Tracks section */
+.tracks-section {
+  background:
+    radial-gradient(circle at left, rgba(255, 80, 0, 0.4), transparent 35%),
+    linear-gradient(135deg, #120000, #090909);
+}
+
+.loop-box {
+  height: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loop-circle {
+  width: 310px;
+  height: 310px;
+  border: 28px solid #ff5a00;
+  border-radius: 50%;
+  box-shadow:
+    0 0 40px #ff4d00,
+    inset 0 0 25px rgba(255, 208, 0, 0.6);
+}
+
+.tiny-car {
+  position: absolute;
+  font-size: 3rem;
+  animation: loopRace 4s linear infinite;
+}
+
+.track-text {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.mini-feature {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 208, 0, 0.25);
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+/* CTA */
+.join-section {
+  background: #080808;
+}
+
+.join-box {
+  background:
+    linear-gradient(135deg, rgba(255, 51, 0, 0.9), rgba(255, 208, 0, 0.85)),
+    url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  padding: 70px 30px;
+  border-radius: 35px;
+  box-shadow: 0 25px 70px rgba(255, 72, 0, 0.35);
+}
+
+.join-box h2 {
+  font-size: 2.7rem;
+  font-weight: 900;
+}
+
+.join-box p {
+  max-width: 650px;
+  margin: 15px auto 30px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  background: #050505;
+  color: #aaa;
+  border-top: 1px solid rgba(255, 120, 0, 0.25);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCar {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(1deg);
+  }
+}
+
+@keyframes speedLine {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-180px);
+    opacity: 0;
+  }
+}
+
+@keyframes drive {
+  from {
+    left: -140px;
+  }
+  to {
+    left: 110%;
+  }
+}
+
+@keyframes loopRace {
+  0% {
+    transform: rotate(0deg) translateX(155px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(155px) rotate(-360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .moving-car {
+    font-size: 3rem;
+  }
+
+  .loop-circle {
+    width: 240px;
+    height: 240px;
+    border-width: 22px;
+  }
+
+  @keyframes loopRace {
+    0% {
+      transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+  }
+}
